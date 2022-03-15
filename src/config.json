@@ -18,8 +18,8 @@
             "port": 465,
             "service": "Mailgun",
             "auth": {
-                "user": "test@mail.daorayaki.org",
-                "pass": "1d452aeab601b6c752a7036da62f4247-1b237f8b-c489cc98"
+                "user": "",
+                "pass": ""
             }
         }
     },
