@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  ghost:
+    image: ghost:4.32.0
+    container_name: ghost
+    volumes:
+      - ../:/var/lib/ghost/content/themes/liebling
+      - ./ghost.db:/var/lib/ghost/content/data/ghost.db:rw
+      - ../:/var/lib/ghost/content/themes/weiss-pro:rw
+      - ./config.json:/var/lib/ghost/config.production.json
+      - ./config.json:/var/lib/ghost/config.development.json
+    environment:
+      - NODE_ENV=development
+      - WEBHOOK_SECRET=we_1Kab4SCj3I7Mu0I1Qn1ih1xI
+      # - mail__transport=SMTP
+      # - mail__options__host=smtp.mailgun.org
+      # - mail__options__service=Mailgun
+      # - mail__options__port=465
+      # - mail__options__auth__user=test@media.daoryaki.org
+      # - mail__options__auth__pass=77bbb18bdc122a74636e443d146f00f1-1b237f8b-ea1093be
+      # - mail__from='daorayaki' <daorayaki@daorayaki.com>
+    ports:
+      - 2368:2368

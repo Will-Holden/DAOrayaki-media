@@ -1,0 +1,36 @@
+{
+    "url": "http://localhost:2368",
+    "server": {
+        "port": 2368,
+        "host": "0.0.0.0"
+    },
+    "database": {
+        "client": "sqlite3",
+        "connection": {
+            "filename": "/var/lib/ghost/content/data/ghost.db"
+        }
+    },
+    "mail": {
+        "from": "'daorayaki' <daorayaki@daorayaki.com>",
+        "transport": "SMTP",
+        "options": {
+            "host": "smtp.mailgun.org",
+            "port": 465,
+            "service": "Mailgun",
+            "auth": {
+                "user": "test@mail.daorayaki.org",
+                "pass": "1d452aeab601b6c752a7036da62f4247-1b237f8b-c489cc98"
+            }
+        }
+    },
+    "logging": {
+        "transports": [
+            "file",
+            "stdout"
+        ]
+    },
+    "process": "systemd",
+    "paths": {
+        "contentPath": "/var/lib/ghost/content"
+    }
+}
